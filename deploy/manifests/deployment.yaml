@@ -1,22 +1,22 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: cicd-demo2-deploy
+  name: cicd-demo3-deploy
   namespace: cicd-test
   labels:
-    app: cicd-demo2
-    env: cicd-test2
+    app: cicd-demo3
+    env: cicd-test3
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: cicd-demo2
-        env: cicd-test2
+        app: cicd-demo3
+        env: cicd-test3
     spec:
       containers:
-      - name: demo2
-        image: deploymentcoe.vodafone.skytapdns.com/cicd-demo2
+      - name: demo3
+        image: deploymentcoe.vodafone.skytapdns.com/cicd-demo3
         imagePullPolicy: Always
         ports:
          - containerPort: 9090
