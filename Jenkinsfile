@@ -15,8 +15,9 @@ pipeline {
         steps {
           echo "Create Automic pkg"
           script {
-            def build_no= ${env.BUILD_NUMBER}
+            def build_no= '[${env.BUILD_NUMBER}]'
             echo build_no
+            /*
             def body = '''{
     "name": "pkg 'build_no'",
     "status": "Active",
@@ -37,6 +38,7 @@ pipeline {
              responseHandle: 'NONE',
              url: 'http://deploymentcoe.vodafone.skytapdns.com:6062/ara/api/data/v1/packages'
             println "Sent a notification, got a $response response"
+            */
         }
         }
       
