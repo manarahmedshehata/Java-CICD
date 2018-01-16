@@ -15,11 +15,11 @@ pipeline {
         steps {
           echo "Create Automic pkg"
           script {
-            def build_no= env.BUILD_NUMBER
+            def build_no= "pkg" env.BUILD_NUMBER
             echo "test ${build_no}"
             
             def body = '''{
-    "name": "pkg ${build_no}",
+    "name": $build_no,
     "status": "Active",
 
     "application": { "name": "TSS Demo" },
