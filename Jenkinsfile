@@ -17,9 +17,9 @@ pipeline {
           script {
             def build_no= env.BUILD_NUMBER
             echo "test ${build_no}"
-            /*
+            
             def body = '''{
-    "name": "pkg 'env.BUILD_NUMBER'",
+    "name": "pkg ${build_no}",
     "status": "Active",
 
     "application": { "name": "TSS Demo" },
@@ -38,7 +38,7 @@ pipeline {
              responseHandle: 'NONE',
              url: 'http://deploymentcoe.vodafone.skytapdns.com:6062/ara/api/data/v1/packages'
             println "Sent a notification, got a $response response"
-            */
+            
         }
         }
       
