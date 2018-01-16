@@ -19,7 +19,7 @@ pipeline {
             echo build_no
             
             def body = '''{
-    "name": "pkg 'build_no'",
+    "name": "pkg ${build_no}",
     "status": "Active",
 
     "application": { "name": "TSS Demo" },
