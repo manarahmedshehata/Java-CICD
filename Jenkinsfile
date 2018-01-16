@@ -19,7 +19,7 @@ pipeline {
             echo "test ${build_no}"
             
             def body = '''{
-    "name": "'''+ build_no '''",
+    "name": "'''+ build_no+'''",
     "status": "Active",
 
     "application": { "name": "TSS Demo" },
