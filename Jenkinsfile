@@ -16,7 +16,7 @@ pipeline {
           echo "Create Automic pkg"
           script {
             def build_no= env.BUILD_NUMBER
-            echo "test" build_no
+            echo "test" + $build_no
             
             def body = '''{
     "name": "pkg 'env.BUILD_NUMBER'",
