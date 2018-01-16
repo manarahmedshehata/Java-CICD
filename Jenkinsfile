@@ -16,7 +16,7 @@ pipeline {
           echo "Create Automic pkg"
           script {
             def body = '''{
-    "name": "pkg testttt",
+    "name": "pkg '[${env.BUILD_NUMBER}]'",
     "status": "Active",
 
     "application": { "name": "TSS Demo" },
