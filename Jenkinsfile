@@ -14,6 +14,7 @@ pipeline {
     stage('Create Automic pkg') {
         steps {
           echo "Create Automic pkg"
+         
           script {
             def build_no= 'pkg_'+ env.BUILD_NUMBER
             echo "test ${build_no}"
@@ -39,7 +40,17 @@ pipeline {
              url: 'http://deploymentcoe.vodafone.skytapdns.com:6062/ara/api/data/v1/packages'
             println "Sent a notification, got a $response response"
             
-        }
+        
+//CCD request
+          def cddresponse =httpRequest acceptType: 'APPLICATION_JSON',
+           authentication: '123456', contentType: 'APPLICATION_JSON',
+            httpMode: 'POST',
+            requestBody: '{"applicationName":"innovation_lab_app","applicationVersionName":"1.1","applicationVersionBuildNumber":"'+ build_no+'"} ', 
+            responseHandle: 'NONE',
+            url: 'http://deploymentcoe.vodafone.skytapdns.com:6063/cdd/design/0000/v1/applications/application-versions/application-version-builds'
+          println "Sent a notification, got a $cddresponse response"
+          }  
+          
         }
       
       }  
