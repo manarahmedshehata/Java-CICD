@@ -100,6 +100,7 @@ pipeline {
            */
           //CCD request
           script {
+            def build_no= 'pkg_'+ env.BUILD_NUMBER
             def cddresponse =httpRequest acceptType: 'APPLICATION_JSON',
              authentication: '123456', contentType: 'APPLICATION_JSON',
               httpMode: 'POST',
