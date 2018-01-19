@@ -87,7 +87,7 @@ pipeline {
 
     stage('Deployment') {
         steps {
-          
+          echo "test"
           echo "call cdd" 
           notifyStarted("Kubernetes Deployment")
           /*          
