@@ -9,6 +9,7 @@ spec:
     app: cicd-demo3
   ports:
   - name: cicd-demo3-port
+    port: 7072
     NodePort: 30073
     targetPort: 9090
   externalIPs:
