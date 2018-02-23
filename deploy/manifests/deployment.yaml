@@ -22,5 +22,5 @@ spec:
          - containerPort: 9090
       imagePullSecrets:
       - name: demo-sec
-      nodeSelector:
-        namelabel: 1node
+      #nodeSelector:
+      #  namelabel: 1node
