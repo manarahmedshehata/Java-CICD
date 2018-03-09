@@ -13,4 +13,4 @@ spec:
     nodePort: 30073
     targetPort: 9090
   externalIPs:
-    - 10.101.0.2
+    - 10.0.0.2
