@@ -14,4 +14,3 @@
 
 ## Run
 ```mvn jetty:run```
-
